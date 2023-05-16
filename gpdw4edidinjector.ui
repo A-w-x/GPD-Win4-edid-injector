@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GpdW4EdidInjector</class>
+ <widget class="QMainWindow" name="GpdW4EdidInjector">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>GPD win4 edid injector</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="fwtab">
+       <attribute name="title">
+        <string>Firmware</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="fwHexLayt"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="logstab">
+       <attribute name="title">
+        <string>Logs (0)</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPlainTextEdit" name="logsTxtBox">
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="loadhex"/>
+    <addaction name="savehex"/>
+   </widget>
+   <widget class="QMenu" name="menuExtract">
+    <property name="title">
+     <string>Extract</string>
+    </property>
+    <addaction name="extfw"/>
+    <addaction name="extedid"/>
+   </widget>
+   <widget class="QMenu" name="menuInject">
+    <property name="title">
+     <string>Inject</string>
+    </property>
+    <addaction name="injedid"/>
+   </widget>
+   <widget class="QMenu" name="menuAdvanced">
+    <property name="title">
+     <string>Advanced</string>
+    </property>
+    <addaction name="actionedid_offset"/>
+    <addaction name="actionedid_size"/>
+    <addaction name="actionReset_to_defaults"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuExtract"/>
+   <addaction name="menuInject"/>
+   <addaction name="menuAdvanced"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="loadhex">
+   <property name="text">
+    <string>Load .hex file</string>
+   </property>
+  </action>
+  <action name="actionSave_firmware_bin">
+   <property name="text">
+    <string>Extract firmware</string>
+   </property>
+  </action>
+  <action name="actionSave_edid_bin">
+   <property name="text">
+    <string>Extract edid</string>
+   </property>
+  </action>
+  <action name="savehex">
+   <property name="text">
+    <string>Save custom .hex file</string>
+   </property>
+  </action>
+  <action name="extfw">
+   <property name="text">
+    <string>firmware</string>
+   </property>
+  </action>
+  <action name="extedid">
+   <property name="text">
+    <string>edid</string>
+   </property>
+  </action>
+  <action name="injedid">
+   <property name="text">
+    <string>edid</string>
+   </property>
+  </action>
+  <action name="actionedid_offset">
+   <property name="text">
+    <string>Set edid offset</string>
+   </property>
+  </action>
+  <action name="actionedid_size">
+   <property name="text">
+    <string>Set edid size</string>
+   </property>
+  </action>
+  <action name="actionReset_to_defaults">
+   <property name="text">
+    <string>Reset to defaults</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
